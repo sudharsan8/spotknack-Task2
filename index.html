@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>spotknack Task</title>
+    <meta charset="UTF-8">
+      		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css'>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Damion);
+body {
+  background: #00897b;
+}
+
+.delayone {
+  -moz-animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+}
+
+.delaytwo {
+  -moz-animation-delay: .4s;
+  -webkit-animation-delay: .4s;
+}
+
+.delaythree {
+  -moz-animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+}
+
+.delayfour {
+  -moz-animation-delay: .8s;
+  -webkit-animation-delay: .8s;
+}
+
+.delayfive {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+.delaysix {
+  -moz-animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+}
+
+h1 {
+  font-family: "Damion", cursive;
+  color: #fff;
+  font-size: 6em;
+  text-align: center;
+  margin-top: 0;
+}
+
+.icon {
+  position: absolute;
+  width: 100%;
+  margin-top: 30%;
+  display: block;
+  color: #004d40;
+  font-size: 3em;
+  -webkit-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#circ {
+  max-width: 100%;
+  min-height: 200px;
+  width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+#circ ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 80px;
+  width: 100%;
+}
+#circ ul li {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin: 0 20px 20px 20px;
+  text-align: center;
+  background: #fff;
+  border: solid 8px #00897b;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#circ ul li:hover {
+  border: solid 8px #004d40;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .icon {
+    position: relative;
+    margin-top: 30%;
+    color: #004d40;
+    font-size: 2em;
+    -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  #circ ul li {
+    width: 80px;
+    height: 80px;
+    margin: 0 5px 5px 5px;
+  }
+  #circ ul li:hover .icon {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 690px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  #circ ul li {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+  }
+  #circ ul li:hover {
+    border: none;
+  }
+}
+</style>
+</script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+</head>
+<body>
+         <!--navbar-->
+<div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                <h2 class="pb-3 mbr-section-title mbr-fonts-style display-2">
+                    Top Performers!
+                </h2>
+                <h3>Overall Top Performing students on the Platform</h3>
+               	<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-primary form-check-label active">
+    <input class="form-check-input" type="radio" name="options" id="option1" autocomplete="off" checked>
+    OverAll
+  </label>
+  <label class="btn btn-primary form-check-label">
+    <input class="form-check-input" type="radio" name="options" id="option2" autocomplete="off"> College
+  </label>
+  <label class="btn btn-primary form-check-label">
+    <input class="form-check-input" type="radio" name="options" id="option3" autocomplete="off"> University
+  </label>
+  <label class="btn btn-primary form-check-label">
+    <input class="form-check-input" type="radio" name="options" id="option3" autocomplete="off"> Batch
+  </label>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+           <div class="container my-3"> <!--distance from top border-->
+    <!--Grid row-->
+    <div class="row ">   <!--Pictures Align In same Row-->
+
+      
+      
+
+      <div class="col-md-2 mt-5 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="kholi.jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-2 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-2  mt-5">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+      <div class="col-md-1 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+      <div class="col-md-2 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+      <div class="col-md mt-3">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+      
+    </div>
+    <!--Grid row-->
+
+      <div class="row my-1">   <!--Pictures Align In same Row-->
+
+      
+      
+
+      <div class="col-md-2   ml-5 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-1 ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-3  ">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-2  ml-5 mt-1">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+      <div class="col-md-2  mt-5	">
+       	 <img class="h-50 rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+<section class="cid-rW9C6MNDMF" id="social-buttons3-6c">
+    
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                                <h3>Share This Page!</h3>
+               					<div id="circ">
+  <ul>
+    <li class="animated zoomIn">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-facebook"></i>
+      </div>
+    </li>
+    <li class="animated zoomIn delayone">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-twitter"></i>
+      </div>
+    </li>
+    <li class="animated zoomIn delaytwo">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </li>
+    <li class="animated zoomIn delaythree">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-youtube"></i>
+      </div>
+    </li>
+    <li class="animated zoomIn delayfour">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-pinterest-p"></i>
+      </div>
+    </li>
+    <li class="animated zoomIn delayfive">
+      <div class="back"></div>
+      <div class="icon">
+        <i class="fa fa-google-plus"></i>
+      </div>
+    </li>
+  </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+               	
+
+
+            </div>
+        </div>
+    </div>
+         
+  </body>
+</html>
+
+
